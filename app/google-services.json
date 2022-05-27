@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1058612553965",
+    "project_id": "g2capp-ffea4",
+    "storage_bucket": "g2capp-ffea4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1058612553965:android:19400930bd5fb4f716c4e4",
+        "android_client_info": {
+          "package_name": "com.example.g2capp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1058612553965-2fch7hd4mbge1svq2uupjni0asqfs9j2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkOKYEWKuAP81GC7PFE6OA7Ht44-JZoFY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1058612553965-2fch7hd4mbge1svq2uupjni0asqfs9j2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

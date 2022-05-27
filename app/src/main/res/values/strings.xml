@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">G2CApp</string>
+    <string name="plus">+</string>
+    <string name="checklist">Check-List</string>
+    <string name="addcheckitem">Add Check Item</string>
+    <string name="checkitem">Check Item</string>
+    <string name="delete">Delete?</string>
+    <string name="deletebtn">Delete</string>
+</resources>
