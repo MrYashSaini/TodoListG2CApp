@@ -5,8 +5,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -33,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements AddDialogBox.AddD
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
         add = findViewById(R.id.addbutton);
-        ArrayAdapter<String> myAdapter= new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_list_item_1,ArrayList);
+        ArrayAdapter<String> myAdapter= new ArrayAdapter<>(MainActivity.this, android.R.layout.simple_list_item_1, ArrayList);
         listView = findViewById(R.id.listview);
         listView.setAdapter(myAdapter);
 
@@ -68,21 +66,15 @@ public class MainActivity extends AppCompatActivity implements AddDialogBox.AddD
             }
         });
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                DeleteDialogBox deleteDialogBox  = new DeleteDialogBox();
-                deleteDialogBox.show(getSupportFragmentManager(),"delete dialog");
-                Position=i;
+        listView.setOnItemClickListener((adapterView, view, i, l) -> {
+            DeleteDialogBox deleteDialogBox  = new DeleteDialogBox();
+            deleteDialogBox.show(getSupportFragmentManager(),"delete dialog");
+            Position=i;
 //                Toast.makeText(MainActivity.this, "position"+i, Toast.LENGTH_SHORT).show();
-            }
         });
-        add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                AddDialogBox addDialogBox = new AddDialogBox();
-                addDialogBox.show(getSupportFragmentManager(),"add dialog");
-            }
+        add.setOnClickListener(view -> {
+            AddDialogBox addDialogBox = new AddDialogBox();
+            addDialogBox.show(getSupportFragmentManager(),"add dialog");
         });
     }
     @Override
@@ -98,7 +90,7 @@ public class MainActivity extends AppCompatActivity implements AddDialogBox.AddD
             database = FirebaseDatabase.getInstance();
             database.getReference().child("check_items").child(ArrayList.get(Position)).removeValue();
             ArrayList.remove(Position);
-            ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_list_item_1, ArrayList);
+            ArrayAdapter<String> myAdapter = new ArrayAdapter<>(MainActivity.this, android.R.layout.simple_list_item_1, ArrayList);
             listView = findViewById(R.id.listview);
             listView.setAdapter(myAdapter);
             Toast.makeText(this, "delete" + ArrayList.get(Position) + dis, Toast.LENGTH_LONG).show();
