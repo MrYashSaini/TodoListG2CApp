@@ -12,22 +12,22 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatDialogFragment;
 
+import java.util.Objects;
+
 public class DeleteDialogBox extends AppCompatDialogFragment {
-    Button deletebtn;
+    Button deleteBtn;
     private DeleteDialogListener listener;
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        LayoutInflater inflater = getActivity().getLayoutInflater();
+        LayoutInflater inflater = Objects.requireNonNull(getActivity()).getLayoutInflater();
         View view = inflater.inflate(R.layout.delete_dialogbox,null);
-        deletebtn = view.findViewById(R.id.deletebtn);
+        deleteBtn = view.findViewById(R.id.deletebtn);
         builder.setView(view);
-        deletebtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                listener.deletetext("yes");
-            }
+        deleteBtn.setOnClickListener(view1 -> {
+            listener.deletetext("yes");
+            dismiss();
         });
         return builder.create();
     }

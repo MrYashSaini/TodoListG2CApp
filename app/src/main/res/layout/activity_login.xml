@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".account.LoginActivity">
+
+    <ImageView
+        android:id="@+id/textView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/to_do_list"
+        android:layout_marginTop="90dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etLoginGmailBox"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="@string/email"
+        android:background="@drawable/box_bg"
+        android:elevation="2dp"
+        android:padding="7dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="30dp"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/etLoginPasswordBox"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:background="@drawable/box_bg"
+        android:elevation="2dp"
+        android:padding="7dp"
+        android:maxLength="30"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/etLoginGmailBox"
+        app:layout_constraintStart_toStartOf="@+id/etLoginGmailBox"
+        app:layout_constraintTop_toBottomOf="@+id/etLoginGmailBox" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="@string/login"
+        android:textAllCaps="false"
+        android:textColor="@color/blue_color"
+        android:textStyle="bold"
+        android:background="@drawable/box_bg"
+        android:backgroundTint="@color/yellow_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/etLoginPasswordBox"
+        app:layout_constraintStart_toStartOf="@+id/etLoginPasswordBox"
+        app:layout_constraintTop_toBottomOf="@+id/tvLoginCreateAccount"
+        app:layout_constraintVertical_bias="0.76" />
+
+    <TextView
+        android:id="@+id/tvLoginCreateAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/create_account"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/etLoginPasswordBox"
+        app:layout_constraintTop_toBottomOf="@+id/etLoginPasswordBox" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

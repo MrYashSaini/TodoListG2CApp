@@ -1,9 +1,17 @@
 <resources>
-    <string name="app_name">G2CApp</string>
+    <string name="app_name">To Do List</string>
     <string name="plus">+</string>
     <string name="checklist">Check-List</string>
     <string name="addcheckitem">Add Check Item</string>
     <string name="checkitem">Check Item</string>
     <string name="delete">Delete?</string>
     <string name="deletebtn">Delete</string>
+    <string name="email">Email</string>
+    <string name="to_do_list">To-Do-List</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="create_account">Create Account</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="conform_password">Conform Password</string>
+    <string name="already_have_an_account">Already have an Account</string>
 </resources>

@@ -26,13 +26,11 @@ public class AddDialogBox extends AppCompatDialogFragment {
         add = view.findViewById(R.id.add_check_item);
         entrybox = view.findViewById(R.id.check_item_entrybox);
         builder.setView(view);
-        add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String checkitem = entrybox.getText().toString();
-                entrybox.getText().clear();
-                listener.applytext(checkitem);
-            }
+        add.setOnClickListener(view1 -> {
+            String checkitem = entrybox.getText().toString();
+            entrybox.getText().clear();
+            listener.applytext(checkitem);
+            dismiss();
         });
         return builder.create();
     }
