@@ -1,4 +1,4 @@
-package com.example.g2capp.account;
+package com.charge.todolist.account;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,8 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.example.g2capp.MainActivity;
-import com.example.g2capp.databinding.ActivitySignUpBinding;
+import com.charge.todolist.MainActivity;
+import com.charge.todolist.databinding.ActivitySignUpBinding;
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.Objects;

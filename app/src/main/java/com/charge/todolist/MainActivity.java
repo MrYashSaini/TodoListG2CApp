@@ -1,4 +1,4 @@
-package com.example.g2capp;
+package com.charge.todolist;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 
-import com.example.g2capp.account.LoginActivity;
+import com.charge.todolist.account.LoginActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;

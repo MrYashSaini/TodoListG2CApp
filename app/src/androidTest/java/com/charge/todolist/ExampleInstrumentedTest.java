@@ -1,4 +1,4 @@
-package com.example.g2capp;
+package com.charge.todolist;
 
 import android.content.Context;
 

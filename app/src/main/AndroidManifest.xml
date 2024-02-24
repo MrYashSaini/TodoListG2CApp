@@ -11,10 +11,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.G2CApp">
         <activity
-            android:name=".account.SignUpActivity"
+            android:name="com.charge.todolist.account.SignUpActivity"
             android:exported="false" />
         <activity
-            android:name=".account.LoginActivity"
+            android:name="com.charge.todolist.account.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,7 +24,7 @@
 
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="com.charge.todolist.MainActivity"
             android:exported="false">
         </activity>
     </application>
